@@ -1,6 +1,6 @@
 From romeohua/simple-php7:nodebug
 
-ENV BASEDIR /usr/share/nginx/html
+ENV BASEDIR /data/www
 
 ENV PHPMYADMIN_VERSION 4.6.1
 
@@ -11,3 +11,5 @@ RUN curl -L -o phpmyadmin.tar.gz "https://files.phpmyadmin.net/phpMyAdmin/${PHPM
 RUN tar -xvzf phpmyadmin.tar.gz && mv phpMyAdmin-${PHPMYADMIN_VERSION}-all-languages/* . && rm -rf phpMyAdmin-${PHPMYADMIN_VERSION}-all-languages
 
 RUN chown -R www:www ${BASEDIR}
+
+ADD config.inc.php ${BASEDIR}/config.inc.php
