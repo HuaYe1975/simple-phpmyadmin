@@ -1,4 +1,4 @@
-From romeohua/simple-php7:latest
+From romeohua/simple-php7:nodebug
 
 ENV BASEDIR /usr/share/nginx/html
 
